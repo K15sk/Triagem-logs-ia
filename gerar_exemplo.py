@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Gera um auth.log FICTÍCIO para testar a triagem (dados inventados, IPs de documentação)."""
+import os
 import random
 from datetime import datetime, timedelta
 
@@ -53,6 +54,7 @@ linhas.sort(key=lambda x: x[0])
 trecho = linhas[10:30]
 random.shuffle(trecho)  # bagunça um trecho, como em logs reais concatenados
 linhas[10:30] = trecho
+os.makedirs("exemplos", exist_ok=True)
 with open("exemplos/auth.log", "w") as f:
     f.write("\n".join(l for _, l in linhas) + "\n")
 print(f"{len(linhas)} linhas geradas em exemplos/auth.log")
