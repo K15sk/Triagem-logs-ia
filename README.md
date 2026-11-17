@@ -40,7 +40,7 @@ Risco ALTO: Há indício de que um atacante conseguiu entrar.
 Relatório salvo em relatorio.md
 ```
 
-Veja o relatório completo gerado a partir do exemplo em [`exemplos/relatorio_exemplo.md`](exemplos/relatorio_exemplo.md).
+Veja o relatório completo gerado a partir do exemplo em [`relatorio_exemplo.md`](relatorio_exemplo.md).
 
 ### Resumo por IA (opcional)
 
@@ -68,11 +68,11 @@ Construído com o Claude (IA da Anthropic) como assistente de programação, a p
 ```
 .
 ├── triagem_logs.py          # a automação
-├── gerar_exemplo.py         # gera um auth.log fictício para testes
-└── exemplos/
-    ├── auth.log             # log de exemplo (dados fictícios, IPs de documentação)
-    └── relatorio_exemplo.md # relatório gerado
+├── gerar_exemplo.py         # gera um auth.log fictício em exemplos/ para testes
+└── relatorio_exemplo.md     # relatório gerado a partir do log de exemplo
 ```
+
+O log de exemplo não fica no repositório: ele é criado ao rodar `gerar_exemplo.py` (dados fictícios, com IPs reservados para documentação).
 
 ## Próximos passos
 
